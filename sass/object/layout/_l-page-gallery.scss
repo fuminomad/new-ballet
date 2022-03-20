@@ -1,0 +1,18 @@
+.l-page-gallery {
+  padding-top: rem(200);
+  background: $bg-white;
+  padding-bottom: rem(200);
+  @include mq(sp) {
+    padding-top: rem(130);
+  }
+}
+
+.l-page-gallery__inner {
+  max-width: rem(1000);
+  width: 100%;
+  padding: 0 40px;
+  margin: auto;
+  @include mq(sp) {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,261 @@
+.p-page-single-mv {
+  width: 100%;
+  padding-top: rem(130);
+  min-height: 100vh; /* カスタムプロパティ未対応ブラウザ用のフォールバック */
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding-left: rem(40);
+  padding-right: rem(40);
+  padding-top: rem(100);
+  @include mq(sp) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    padding-top: rem(80);
+  }
+}
+
+.p-page-single-mv__container {
+  max-width: rem(1200);
+  position: relative;
+  height: 100%;
+  height: calc(var(--vh, 1vh) * 100 - 145px);
+  width: 100%;
+  margin: 0 auto;
+  @include mq(sp) {
+    max-width: rem(600);
+    height: calc(var(--vh, 1vh) * 100 - 125px);
+  }
+}
+.page-single-mv__wrapper {
+  height: inherit;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-single-mv__wrapper .page-single-mv__image {
+  height: 100%;
+
+  height: calc(var(--vh, 1vh) * 100 - 179px);
+  width: 100%;
+  @include mq(sp) {
+    height: calc(var(--vh, 1vh) * 100 - 130px);
+  }
+}
+.page-single-mv__wrapper .page-single-mv__image .page-single-mv__figure {
+  height: 100%;
+  position: relative;
+  padding-top: 56.25%;
+}
+@media screen and (min-width: 1000px) and (max-width: 1175px) {
+  .page-single-mv__wrapper .page-single-mv__image .page-single-mv__figure {
+    padding-top: 64.25%;
+  }
+}
+.page-single-mv__wrapper
+  .page-single-mv__image
+  .page-single-mv__figure
+  .page-single-mv__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: calc(var(--vh, 1vh) * 100 - 9.06rem);
+  @include mq(sp) {
+    height: calc(var(--vh, 1vh) * 100 - 7.8125rem);
+  }
+}
+.page-single-mv__img-4 {
+  display: block;
+  background: url(../img/page-single-mv.jpg) no-repeat top center / cover;
+  @include mq(sp) {
+    background: url(../img/page-single-mv.jpg) no-repeat top center / cover;
+  }
+}
+.p-page-single-mv__title-4th {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $text-color;
+  font-size: rem(40);
+  z-index: 2;
+  width: 100%;
+  background: $white;
+  text-align: center;
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.25;
+  font-family: $font-family-base;
+  font-weight: 900;
+  font-weight: $font-weight-bold;
+  @include mq(tab) {
+    font-size: 35px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  @include mq(sp) {
+    font-size: 25px;
+  }
+}
+.p-page-single-mv__title-4th::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #ca4 20px,
+        #ca4 23px,
+        transparent 23px
+      )
+      left top / 23px 25px no-repeat,
+    radial-gradient(
+        circle at top right,
+        transparent 20px,
+        #ca4 20px,
+        #ca4 23px,
+        transparent 23px
+      )
+      right top / 23px 25px no-repeat,
+    radial-gradient(
+        circle at bottom left,
+        transparent 20px,
+        #ca4 20px,
+        #ca4 23px,
+        transparent 23px
+      )
+      left bottom / 23px 25px no-repeat,
+    radial-gradient(
+        circle at bottom right,
+        transparent 20px,
+        #ca4 20px,
+        #ca4 23px,
+        transparent 23px
+      )
+      right bottom / 23px 25px no-repeat,
+    linear-gradient(90deg, transparent 20px, #ca4 23px) left top / 51% 5px
+      no-repeat,
+    linear-gradient(-90deg, transparent 20px, #ca4 23px) right top / 51% 5px
+      no-repeat,
+    linear-gradient(90deg, transparent 20px, #ca4 23px) left bottom / 51% 5px
+      no-repeat,
+    linear-gradient(-90deg, transparent 20px, #ca4 23px) right bottom / 51% 5px
+      no-repeat,
+    linear-gradient(180deg, transparent 20px, #ca4 23px) left top / 5px 51%
+      no-repeat,
+    linear-gradient(0deg, transparent 20px, #ca4 23px) left bottom / 5px 51%
+      no-repeat,
+    linear-gradient(180deg, transparent 20px, #ca4 23px) right top / 5px 51%
+      no-repeat,
+    linear-gradient(0deg, transparent 20px, #ca4 23px) right bottom / 5px 51%
+      no-repeat;
+}
+.p-page-single-mv__title-4th::after {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  content: "";
+  box-shadow: 0 0 0 1px #ca4;
+}
+
+.p-page-single-mv__title-4th span {
+  display: inline-block;
+  position: relative;
+  padding: 7px 15px;
+  font-size: rem(18); /*フォントサイズ*/
+  color: #fff; /*フォントカラー*/
+  background: $base-color; /*背景色*/
+  font-weight: bold;
+  @include mq(tab) {
+    font-size: 18px;
+  }
+  @include mq(sp) {
+    font-size: 16px;
+    padding: 7.5px 10px;
+    margin-top: rem(10);
+  }
+}
+.p-page-single-mv__title-4th span {
+  background: $base-color; /*背景色*/
+}
+
+.p-page-single-mv__title-4th span::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 11px transparent;
+  border-right: solid 20px rgb(149, 158, 155); /*折り返し部分*/
+}
+.p-page-single-mv__title-4th span::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 11px transparent;
+  border-left: solid 20px rgb(149, 158, 155); /*折り返し部分*/
+}
+
+.p-page-single-mv__news {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-family-base;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: $base-color;
+  color: $white;
+  position: relative;
+  @include mq(sp) {
+    padding-left: rem(18);
+  }
+}
+.p-page-single-mv__icon {
+  position: absolute;
+  bottom: -43px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+  @include mq(sp) {
+    right: 10px;
+  }
+}
+.p-page-single-mv__wrapper {
+  width: 100%;
+}
+
+//imgタグだと下に隙間ができるのでblockに。
+.page-single-mv__img img {
+  display: block;
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  .p-page-single-mv {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+  .page-single-mv__figure .page-single-mv__img {
+    height: calc(520px - 9.06rem) !important;
+  }
+
+  .p-page-single-mv__container {
+    height: calc(520px - 145px);
+    @include mq(sp) {
+      height: calc(500px - 125px) !important;
+    }
+  }
+  .page-single-mv__img img {
+    display: block !important;
+  }
+}

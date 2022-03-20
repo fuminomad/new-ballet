@@ -1,0 +1,33 @@
+.l-page-classes {
+  background: $bg-white;
+  padding-top: 200px;
+  padding-bottom: rem(100);
+  @include mq(sp) {
+    padding-top: rem(130);
+  }
+}
+
+.l-page-classes__inner {
+  width: 100%;
+  padding: 0 40px;
+  max-width: rem(1200);
+  margin: 0 auto;
+  text-align: center;
+  @include mq(sp) {
+    padding: 0 15px;
+  }
+}
+
+.l-page-classes__title {
+  padding-bottom: rem(80);
+  font-size: rem(24);
+}
+
+.classes__cards {
+  display: inline-block;
+  padding-bottom: rem(10);
+  margin: 10px 15px 0;
+  @include mq(sp) {
+    margin-top: rem(5);
+  }
+}

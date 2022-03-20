@@ -1,0 +1,404 @@
+.p-company {
+  padding-left: rem(40);
+  padding-right: rem(40);
+  padding-bottom: rem(80);
+  margin-top: rem(280);
+  @include mq(sp) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    margin-top: rem(180);
+    padding-bottom: 40px;
+  }
+}
+.p-company__inner {
+  width: 100%;
+  max-width: rem(1000);
+  margin: 0 auto;
+}
+.p-company__title {
+  padding-bottom: 40px;
+  position: relative;
+}
+.p-company__title:before {
+  content: "";
+  position: absolute;
+  top: rem(-160);
+  left: calc(50% - 60%);
+  background: url(../img/company-title.png) no-repeat center center / contain;
+  width: rem(462);
+  height: rem(106);
+  @include mq(tab) {
+    width: rem(422);
+    height: rem(95);
+    top: rem(-140);
+  }
+  @include mq(sp) {
+    width: rem(323);
+    height: rem(74);
+    left: calc(50% - 45%);
+    font-size: rem(60);
+    top: -110px;
+  }
+  @include mq(ssp) {
+    left: calc(50% - 45%);
+    width: rem(230);
+    height: rem(53);
+    left: 50%;
+    transform: translate(-50%);
+    top: rem(-80);
+  }
+}
+@media screen and (max-width: 500px) {
+  .p-company__title:before {
+    width: rem(323);
+    height: rem(74);
+    top: rem(-80);
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1100px) {
+  .p-company__title:before {
+    left: calc(50% - 45%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .p-company__title:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p-company__title {
+  padding-bottom: 40px;
+}
+
+.p-company__title span {
+  font-size: rem(50);
+  color: $base-color;
+  font-family: $second-font-family;
+}
+
+.p-company__card:nth-child(even) {
+  flex-direction: row-reverse;
+  @include mq(sp) {
+    flex-direction: column;
+  }
+}
+.p-company__cards {
+  padding-top: rem(100);
+  @include mq(sp) {
+    padding-top: rem(50);
+  }
+}
+.p-company__card {
+  display: flex;
+  padding: 8px;
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+  margin-bottom: rem(100);
+  @include mq(sp) {
+    margin-bottom: rem(100);
+    max-width: rem(600);
+    margin: auto;
+    flex-direction: column;
+  }
+}
+.p-company__card::after {
+  position: absolute;
+  line-height: 1;
+  font-size: rem(80);
+  -webkit-background-clip: text;
+  color: $base-color;
+  top: -18%;
+  left: 0;
+  font-family: $second-font-family;
+  font-weight: bold;
+  font-style: italic;
+  @include mq(sp) {
+    top: -5%;
+    left: 48%;
+    transform: translateX(-50%);
+    font-size: rem(70);
+  }
+  @include mq(ssp) {
+    font-size: rem(60);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .p-company__card::after {
+    top: -38px;
+  }
+}
+.p-company__card:nth-of-type(even)::after {
+  position: absolute;
+  line-height: 1;
+  font-size: rem(80);
+  -webkit-background-clip: text;
+  top: -18%;
+  left: 88%;
+  color: $base-color;
+  font-style: italic;
+
+  font-family: $second-font-family;
+  font-weight: bold;
+
+  @include mq(sp) {
+    top: -5%;
+    left: 48%;
+    transform: translateX(-50%);
+    font-size: rem(70);
+    // left: 0;
+  }
+  @include mq(ssp) {
+    font-size: rem(60);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .p-company__card:nth-of-type(even)::after {
+    top: -38px;
+  }
+}
+.p-company__card:first-of-type::after {
+  content: "01";
+}
+.p-company__card:nth-of-type(2)::after {
+  content: "02";
+}
+.p-company__card:nth-of-type(3)::after {
+  content: "03";
+}
+.card__texts {
+  width: 55%;
+  padding-left: 30px;
+  padding-right: rem(50);
+  display: inline-block;
+  padding-top: rem(35);
+  background: $white;
+  text-align: center;
+  @include mq(sp) {
+    padding-top: rem(50);
+    width: 100%;
+    padding-left: rem(15);
+    padding-right: rem(15);
+    padding-bottom: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .card__texts {
+    padding-bottom: rem(30);
+  }
+}
+.p-company__card:nth-child(even) .card__texts {
+  padding-right: rem(30);
+  padding-left: rem(50);
+  color: $black;
+
+  @include mq(sp) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+.line_narrow {
+  display: inline;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  line-height: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgba(0, 0, 0, 0) linear-gradient(transparent 80%, #fee512 0%)
+    repeat scroll 0 0;
+  @include mq(sp) {
+    margin-left: 0;
+  }
+}
+.line_narrow-2nd {
+  display: inline;
+
+  line-height: 1;
+  background: rgba(0, 0, 0, 0) linear-gradient(transparent 80%, #fee512 0%)
+    repeat scroll 0 0;
+  @include mq(sp) {
+    margin-left: 0;
+  }
+}
+.card__title {
+  text-align: center;
+  color: $black;
+  font-size: rem(24);
+  font-weight: $font-weight-bold;
+
+  @include mq(sp) {
+    font-size: rem(24);
+  }
+}
+.card__title--3rd {
+  text-align: center;
+  color: $black;
+  font-size: rem(20);
+  font-weight: $font-weight-bold;
+  margin-left: 0;
+  @include mq(sp) {
+    font-size: rem(20);
+  }
+}
+.card__title span {
+  font-family: $second-font-family;
+  font-size: rem(30);
+  color: $base-color;
+
+  margin-right: 3px;
+}
+.card__text {
+  color: $black;
+  padding-top: rem(30);
+  padding-bottom: rem(5);
+  text-align: left;
+  @include mq(sp) {
+    text-align: left;
+  }
+}
+.card__text--bottom {
+  color: $black;
+  padding-top: rem(15);
+  padding-bottom: rem(5);
+  text-align: left;
+  @include mq(sp) {
+    text-align: left;
+  }
+  font-weight: $font-weight-bold;
+}
+.card__text-3rd {
+  color: $black;
+  padding-top: rem(30);
+  padding-bottom: rem(10);
+  text-align: left;
+  @include mq(sp) {
+    text-align: left;
+    // padding-bottom: rem(50);
+  }
+}
+.card-btns {
+  display: flex;
+  justify-content: center;
+  @include mq(sp) {
+    flex-direction: column;
+  }
+}
+.card-btns .c-btn {
+  margin-left: rem(20);
+  @include mq(sp) {
+    margin-left: rem(0);
+  }
+}
+.card-btns .c-btn:first-child {
+  @include mq(sp) {
+    margin-bottom: rem(30);
+  }
+}
+.card__images {
+  width: 45%;
+  height: auto;
+
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+
+.card__figure {
+  padding-top: 68.57%;
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+.card__figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .card__figure img {
+    top: rem(40);
+  }
+}
+.card__images--1st {
+  position: relative;
+  transition: all 0.5s;
+}
+.card__images--1st:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+.card__images--1st:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: $base-color;
+  background: $yellow;
+  font-size: rem(18);
+  line-height: 1;
+  padding: 8px 10px;
+  font-family: $font-family-base;
+  content: "Gallery";
+  font-weight: bold;
+}
+.card__images--1st:hover::after {
+  background: $base-color;
+  color: $yellow;
+}
+.card__images--3rd {
+  position: relative;
+  transition: all 0.5s;
+}
+.card__images--3rd:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+.card__images--3rd:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: $base-color;
+  background: $yellow;
+  font-size: rem(18);
+  line-height: 1;
+  padding: 8px 10px;
+  font-family: $font-family-base;
+  content: "More Info";
+  font-weight: bold;
+}
+.card__images--3rd:hover::after {
+  background: $base-color;
+  color: $yellow;
+}
+.card__images--2nd {
+  position: relative;
+  transition: all 0.5s;
+}
+.card__images--2nd:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+.card__images--2nd:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  color: $base-color;
+  background: $yellow;
+  font-size: rem(18);
+  line-height: 1;
+  padding: 8px 10px;
+  font-family: $font-family-base;
+  content: "教室一覧";
+  font-weight: bold;
+}
+.card__images--2nd:hover::after {
+  background: $base-color;
+  color: $yellow;
+}

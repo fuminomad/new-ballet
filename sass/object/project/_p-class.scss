@@ -1,0 +1,140 @@
+.p-class {
+  background-color: $light-blue;
+  background-color: $bg-white;
+  color: $base-color;
+  padding: rem(300) rem(40) rem(120);
+  @include mq(sp) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    padding-bottom: rem(120);
+    padding-top: rem(230);
+  }
+}
+.p-class__inner {
+  max-width: rem(980);
+  margin: auto;
+  width: 100%;
+}
+.p-class__title {
+  position: relative;
+  color: $black;
+}
+.p-class__title:before {
+  content: "";
+  position: absolute;
+  top: rem(-160);
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../img/class-title.png) no-repeat center center / contain;
+  width: rem(234);
+  height: rem(73);
+  @include mq(sp) {
+    top: rem(-140);
+    width: rem(187);
+    height: rem(58);
+  }
+  @include mq(ssp) {
+    width: rem(163);
+    height: rem(51);
+  }
+}
+.p-section__sub-title {
+  text-align: center;
+  font-weight: $font-weight-bold;
+}
+.p-class__cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: rem(240);
+  @include mq(sp) {
+    padding-top: rem(16);
+    padding-bottom: rem(80);
+  }
+}
+.p-class__card {
+  background: $white;
+  box-shadow: 0 0 5px $base-color;
+
+  margin-bottom: rem(30);
+  width: calc(33.3% - 40px * 2 / 3);
+  margin-left: rem(40);
+  text-align: center;
+  padding: rem(50) 0;
+  position: relative;
+
+  @include mq(sp) {
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+    margin-bottom: 0;
+  }
+}
+.p-class__card:nth-child(3n + 1) {
+  margin-left: 0;
+  @include mq(sp) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.p-class__card:nth-child(3n) {
+  background: $white;
+}
+
+.p-class__header {
+  padding-bottom: rem(30);
+  color: $black;
+  font-size: rem(18);
+  font-weight: $font-weight-bold;
+  @include mq(sp) {
+    font-size: rem(24);
+  }
+}
+.p-class__text {
+  color: $black;
+  color: $black;
+  font-weight: $font-weight-bold;
+  font-size: rem(18);
+}
+
+.p-class__card::after {
+  position: absolute;
+  line-height: 1;
+  font-size: rem(30);
+  color: white;
+  top: -56%;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $base-color;
+  border-radius: 50%;
+  padding: 50px 41px;
+  font-family: $font-family-base;
+  font-weight: bold;
+  font-style: italic;
+  @include mq(sp) {
+    padding-top: rem(45);
+  }
+}
+
+.p-class__card:first-of-type::after {
+  content: "kids&\Ayouth";
+  white-space: pre;
+  font-family: $second-font-family;
+}
+
+.p-class__card:nth-of-type(2)::after {
+  content: "senior";
+  background: $white;
+  color: $base-color;
+  border: 5px solid $base-color;
+  font-family: $second-font-family;
+  padding: 60px 33px 62px 30px;
+  top: -122px;
+}
+.p-class__card:nth-of-type(3)::after {
+  content: "kids&\Ayouth";
+  white-space: pre;
+  font-family: $second-font-family;
+}
